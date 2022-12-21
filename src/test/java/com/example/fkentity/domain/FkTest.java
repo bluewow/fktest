@@ -43,6 +43,7 @@ public class FkTest {
     @Test
     void nonfkTest() {
         Member member = new Member(1L, "member");
+        memberRepository.save(member);
         Post post = new Post(2l, "title", member);
         postRepository.save(post);
     }
