@@ -25,6 +25,8 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.rest-assured:rest-assured:4.3.0'
+    testImplementation 'com.navercorp.fixturemonkey:fixture-monkey-starter:0.4.3'
 }
 
 tasks.named('test') {

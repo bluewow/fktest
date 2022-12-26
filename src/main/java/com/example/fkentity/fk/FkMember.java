@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class FkMember {
@@ -15,5 +14,14 @@ public class FkMember {
     @Id @GeneratedValue
     private Long id;
 
-    String name;
+    public String name;
+
+    public FkMember(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public FkMember(String name) {
+        this.name = name;
+    }
 }
