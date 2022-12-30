@@ -34,6 +34,9 @@ dependencies {
 
     // DB Driver
     runtimeOnly 'mysql:mysql-connector-java'
+
+    testImplementation("com.navercorp.fixturemonkey:fixture-monkey-starter:0.4.3")
+    testImplementation("com.navercorp.fixturemonkey:fixture-monkey-javax-validation:0.4.3")
 }
 
 tasks.named('test') {
