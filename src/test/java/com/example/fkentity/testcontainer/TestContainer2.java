@@ -1,16 +1,12 @@
 package com.example.fkentity.testcontainer;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.containers.MySQLContainer;
-import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Slf4j
 @Testcontainers
-public class TestContainer extends MysqlTestContainer{
+public class TestContainer2 extends MysqlTestContainer{
 
     @Test
     void test1() {
@@ -45,7 +41,6 @@ public class TestContainer extends MysqlTestContainer{
         log.info("로그 getUsername {} ", mySQLContainer.getUsername());
         log.info("로그 getPassword {} ", mySQLContainer.getPassword());
     }
-
 
     @Test
     void test4() {

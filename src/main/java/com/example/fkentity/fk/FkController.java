@@ -1,34 +1,27 @@
 package com.example.fkentity.fk;
 
-import com.example.fkentity.fk.FkPost;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
-@Transactional
 @RestController
 public class FkController {
 
-    private final FkMemberRepository fkMemberRepository;
+    private final FkCommentRepository fkCommentRepository;
     private final FkPostRepository fkPostRepository;
+    private final FkMemberRepository fkMemberRepository;
 
-    @PostMapping("/post/create")
-    public Long create(@RequestBody PostDto postDto) {
+    @Transactional
+    @GetMapping("/test")
+    public void test() {
+        FkMember fkMember = new FkMember(1L, "member");
+        FkPost fkPost = new FkPost(1L, "post", fkMember);
+        FkComment fkComment = new FkComment(1L, "comment", fkPost.getFkMember());
 
-        FkMember member = new FkMember("member");
-        FkPost post = new FkPost(postDto.getTitle(), member);
-        fkMemberRepository.save(member);
-        FkPost fkpost = fkPostRepository.save(post);
-
-        return fkpost.getId();
+        fkMemberRepository.save(fkMember);
+        fkPostRepository.save(fkPost);
+        fkCommentRepository.save(fkComment);
     }
-
-    @GetMapping("/post/{postId}")
-    public PostDto get(@PathVariable Long postId) {
-        FkPost fkpost = fkPostRepository.findById(postId).get();
-
-        return new PostDto(fkpost);
-    }
-
 }
