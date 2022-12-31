@@ -1,16 +1,12 @@
 package com.example.fkentity.testcontainer;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.containers.MySQLContainer;
-import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Slf4j
 @Testcontainers
-public class TestContainer extends MysqlTestContainer{
+public class TestContainer15 extends MysqlTestContainer{
 
     @Test
     void test1() {

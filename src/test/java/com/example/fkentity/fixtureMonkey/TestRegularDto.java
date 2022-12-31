@@ -1,18 +1,18 @@
-package com.example.fkentity.testcontainer;
+package com.example.fkentity.fixtureMonkey;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 @Data
-public class TestDto {
+public class TestRegularDto {
 
     @NotNull
-    private String name;
+    public String name;
 
+    @NotNull
     @Pattern(regexp="^[a-zA-Z0-9][a-zA-Z0-9\\-]+[a-zA-Z0-9]$")
-    private String pattern;
+    public String pattern;
 
 }
