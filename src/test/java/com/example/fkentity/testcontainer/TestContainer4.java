@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Slf4j
-@Testcontainers
 public class TestContainer4 extends MysqlTestContainer{
 
     @Test
