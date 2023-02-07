@@ -1,7 +1,5 @@
 package com.example.fkentity.noFk;
 
-import com.example.fkentity.fk.FkMember;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;

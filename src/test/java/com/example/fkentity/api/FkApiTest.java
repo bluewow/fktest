@@ -1,22 +1,12 @@
 package com.example.fkentity.api;
 
-import com.example.fkentity.fk.PostDto;
 import com.navercorp.fixturemonkey.LabMonkey;
 import com.navercorp.fixturemonkey.api.introspector.FieldReflectionArbitraryIntrospector;
 import io.restassured.RestAssured;
-import io.restassured.RestAssured.*;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.config.HeaderConfig;
 import io.restassured.http.ContentType;
-import io.restassured.matcher.RestAssuredMatchers.*;
-import io.restassured.response.ExtractableResponse;
-import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.aspectj.lang.annotation.Before;
-import org.hamcrest.Matchers.*;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

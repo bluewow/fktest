@@ -1,9 +1,5 @@
 package com.example.fkentity.domain;
 
-import com.example.fkentity.fk.FkMember;
-import com.example.fkentity.fk.FkMemberRepository;
-import com.example.fkentity.fk.FkPost;
-import com.example.fkentity.fk.FkPostRepository;
 import com.example.fkentity.noFk.Member;
 import com.example.fkentity.noFk.MemberRepository;
 import com.example.fkentity.noFk.Post;
