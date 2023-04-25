@@ -38,6 +38,7 @@ public class RestAssuredExtend {
         ResponseSpecification responseSpec = response.build();
         RestAssured.responseSpecification = responseSpec;
         System.out.println("TEST");
+        System.out.println("TEST";
 
     }
 
